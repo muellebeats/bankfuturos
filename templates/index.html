@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Cuenta Atrás para Cierre de Velas</title>
     <script>
-        // Función que actualiza la cuenta atrás en cada elemento con clase "countdown"
         function updateCountdowns() {
             const now = new Date().getTime();
             document.querySelectorAll(".countdown").forEach(function(elem) {
@@ -21,13 +20,12 @@
                 }
             });
         }
-        // Actualizamos cada segundo
         setInterval(updateCountdowns, 1000);
         window.onload = updateCountdowns;
     </script>
 </head>
 <body>
-    <h1>Cuenta Atrás para Cierre de Velas</h1>
+    <h1>Cuenta Atrás para Cierre de Velas (UTC-3)</h1>
     <ul>
         {% for timeframe, target in countdowns.items() %}
         <li>
